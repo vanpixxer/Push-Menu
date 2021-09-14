@@ -3,4 +3,47 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Sidebar Styles */
+.nav-open .nav {
+    transform: translateX(0);
+}
+.nav-open .main {
+    transform: translateX(350px);
+}
+.nav {
+    width: 350px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #341931;
+    transform: translateX(-350px);
+    transition: transform 0.3s;
+}
+.nav-close {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 15px 25px;
+    color: #DDDDDD;
+    cursor: pointer;
+}
+
+.main {
+   transition: transform 0.3s;
+}
+
+/* Menu Button */
+.button {
+    background: #7A1E48;
+    color: #DDDDDD;
+    font-size: 1.5rem;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
 }
